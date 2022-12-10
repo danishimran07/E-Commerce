@@ -62,7 +62,7 @@ img{
     height: 15px;
 }
 
-.navlinks{
+.navlinks img{
     display: none;
 }
 
@@ -74,6 +74,7 @@ img{
     gap: 15px;
 }
 .right-menu{
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -81,6 +82,76 @@ img{
 .right-menu div > img{
     width: 25px;
     height: 25px;
+}
+
+.show-cart{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 20vw;
+    height: auto;
+    min-height: 100px;
+    top: 130%;
+    right: 15%;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 1px hsl(0, 1%, 66%) ;
+}
+
+.toggle{
+    display: none!important;
+}
+.show-cart h4{
+    margin: 10px 0;
+}
+.show-cart button{
+    width: 100%;
+    box-shadow: none;
+}
+.cartItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+.cartItems p{
+    font-size: small;
+}
+
+.cartItems div div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cartItems img:last-child{
+    width: 15px;
+    height: 15px;
+
+}
+
+.hello{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+
+}
+
+.slide{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    position:absolute;
+    z-index: 100;
+    top:40%;
+}
+.slide img{
+    width: 20px;
+    height: auto;
+}
+.slide img:hover{
+    cursor: pointer;
 }
 
 .right{
@@ -161,7 +232,7 @@ button span{
     font-weight: 700;
 }
 
-@media screen and (min-width: 375px){
+@media screen and (min-width: 840px){
     header{
         padding: 0% 15%;
     }
@@ -169,7 +240,7 @@ button span{
         display: none;
     }
     .navlinks{
-        display: flex;
+        display: flex!important;
     }
     .navlinks ul{
         display: flex;
@@ -236,4 +307,41 @@ button{
     width: 60%;
     box-shadow: 0px 30px 10px -12px hsl(25, 100%, 94%) ;
 }
+}
+
+@media screen and (max-width: 840px) {
+    .navlinks{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 60vw;
+        height: 100vh;
+        top: 0;
+        left:0px;
+        background-color: white;
+        z-index: 101;
+        box-shadow: 1px 5px 5px 1px rgb(210, 209, 209);
+        padding: 40px;
+        gap: 60px;
+    }
+    .navlinks img{
+        display: block;
+        width: 20px;
+    }
+    
+    .navlinks ul{
+        display: flex;
+        height: 90%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .navlinks ul li{
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .toggleMenu{
+        display: none!important;
+    }
 }
